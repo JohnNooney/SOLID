@@ -2,7 +2,7 @@
 This project demonstrates the SOLID principles through simple C# programs
 
 ## Project Structure
-This project follows a monorepo structure where each root folder corresponds to a different .NET C# Solution. Additionally, each root folder will corresponding to each SOLID principle. 
+This project follows a monorepo structure where each root folder corresponds to a different .NET C# Solution. Additionally, each root folder will correspond to each SOLID principle. 
 
 ### S - Single Responsibility Principle
 TBD
@@ -19,7 +19,7 @@ TBD
 ### D - Dependency Inversion Principle
 TBD
 
-# Development Setup Preqrequristes
+# Development Setup Prerequisites
 TBD
 
 # How to Run
