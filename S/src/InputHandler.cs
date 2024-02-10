@@ -14,12 +14,23 @@ public class InputHandler
         this.exceptionHandler = exceptionHandler;
         stringInput = "";
     }
+
+    public string getStringInput()
+    {
+        return stringInput;
+    }
     
-    public void collectStringInput()
+    public void collectValidStringInput()
     {   
+        collectStringInput();
+        checkStringValidity();
+    }
+
+    private void collectStringInput()
+    {
         try
         {
-            getValidInput();
+            stringInput = Console.ReadLine();
         }
         catch(Exception ex)
         {
@@ -27,18 +38,11 @@ public class InputHandler
         }
     }
 
-    public string getStringInput()
+    private void checkStringValidity()
     {
-        return stringInput;
-    }
-
-    private void getValidInput()
-    {
-        stringInput = Console.ReadLine();
-
         if(!validator.isStringValid(stringInput))
         {
-            
+            collectValidStringInput();
         }
     }
 }

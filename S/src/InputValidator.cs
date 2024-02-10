@@ -13,7 +13,7 @@ public class InputValidator
         
         if(!validity)
         {
-            Console.WriteLine("Input is invalid.");
+            Console.WriteLine("Input is invalid. Pleas try again.");
         }
 
         return validity;

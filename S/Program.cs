@@ -6,13 +6,10 @@ class Program
 { 
     static void Main(string[] args)
     {
-        OutputHandler outputHandler = new OutputHandler();
-        InputValidator inputValidator = new InputValidator();
-        InputHandler inputHandler = new InputHandler(inputValidator);
+        InputOutput io = new InputOutput();
 
-        outputHandler.outputString("Enter something!");
-        inputHandler.collectStringInput();
-
-        outputHandler.outputString(inputHandler.getStringInput());        
+        io.output("Hello There");
+        io.input();
+        io.echoInput();
     }
 }

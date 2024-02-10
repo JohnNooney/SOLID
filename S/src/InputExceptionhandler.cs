@@ -2,7 +2,7 @@ namespace SingleResponsibilityPrinciple;
 
 using System;
 
-public class InputExceptionhandler
+public class InputExceptionHandler
 {
     public void handleException(Exception ex)
     {
