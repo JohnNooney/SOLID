@@ -1,9 +1,15 @@
 ﻿namespace SingleResponsibilityPrinciple;
 
+using System;
+
 class Program
-{
+{ 
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        InputOutput io = new InputOutput();
+
+        io.output("Hello There");
+        io.input();
+        io.echoInput();
     }
 }
