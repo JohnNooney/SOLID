@@ -19,7 +19,13 @@ public class InputValidator
 
     public bool isIntValid(Input input)
     {
-        // TODO
+        validity = input.IntInput != null;
+        
+        if(!validity)
+        {
+            Console.WriteLine("Int Input is invalid. Pleas try again.");
+        }
+
         return validity;
     }
 }
