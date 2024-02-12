@@ -3,6 +3,7 @@
 class Program
 {
     private static InputOutput stringIO;
+    private static InputOutput intIO;
     private static InputOutputBuilder ioBuilder;
     private static InputOutputDirector ioDirector;
     private static Output consoleOutput;
@@ -11,6 +12,7 @@ class Program
     {
         initIO();
         createStringIO();
+        createIntIO();
     }
 
     static void Main(string[] args)
@@ -20,6 +22,12 @@ class Program
         stringIO.Output(consoleOutput);
         stringIO.Input();
         stringIO.EchoInput();
+
+        consoleOutput.StringOutput = "Enter a number:";
+
+        stringIO.Output(consoleOutput);
+        intIO.Input();
+        intIO.EchoInput();
     }
 
     private static void initIO()
@@ -38,5 +46,12 @@ class Program
         ioDirector.BuildStringIO();
 
         stringIO = ioBuilder.GetInputOutput();
+    }
+
+    private static void createIntIO()
+    {
+        ioDirector.BuildIntIO();
+
+        intIO = ioBuilder.GetInputOutput();
     }
 }
