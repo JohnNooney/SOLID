@@ -29,6 +29,17 @@ public class InputOutputBuilder: IInputOutputBuilder
         outputHandler = new StringOutputHandler();
     }
 
+    public void BuildIntInputHandler()
+    {
+        inputHandler = new IntInputHandler(validator, exceptionHandler);
+    }
+
+    public void BuildIntOutputHandler()
+    {
+        
+        outputHandler = new IntOutputHandler();
+    }
+
     public void BuildInputOutput()
     {
         io = new InputOutput(inputHandler, outputHandler);

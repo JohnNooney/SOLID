@@ -20,6 +20,10 @@ public class InputOutputDirector{
 
     public void BuildIntIO()
     {
-        // TODO
+        _builder.BuildInputExceptionHandler();
+        _builder.BuildInputValidator();
+        _builder.BuildIntInputHandler();
+        _builder.BuildIntOutputHandler();
+        _builder.BuildInputOutput();
     }
 }
