@@ -13,23 +13,23 @@ class ShapeCreatorClient
         createShapeFactory();
 
         shapeArea = factory.getShapeArea(enteredDimensions);
-        
-        Console.WriteLine($"Your {enteredShape} array has an area of: {shapeArea}");
+
+        Console.WriteLine($"Your {enteredShape} has an area of: {shapeArea}");
     }
 
     public void collectUserInput()
     {
         Console.WriteLine("Enter a shape: ");
-        string enteredShape = Console.ReadLine();
+        enteredShape = Console.ReadLine();
 
         Console.WriteLine("Enter your shape's dimensions.");
         Console.WriteLine("Dimension 1: ");
-        enteredDimensions.Append(int.Parse(Console.ReadLine()));
+        enteredDimensions[0] = (int.Parse(Console.ReadLine()));
 
         if(enteredShape == "rectangle")
         {
             Console.WriteLine("Dimension 2: ");
-            enteredDimensions.Append(int.Parse(Console.ReadLine()));
+            enteredDimensions[1] = (int.Parse(Console.ReadLine()));
         }
     }
 
@@ -47,8 +47,7 @@ class ShapeCreatorClient
                 factory = new SquareFactory();
                 break;
             default:
-                Console.WriteLine("shape not found");
-                break;
+                throw new Exception("shape not found");
         }
     }
 }
