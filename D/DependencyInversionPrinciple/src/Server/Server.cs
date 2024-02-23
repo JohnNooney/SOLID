@@ -16,10 +16,10 @@ class Server
 
     public void CreateFileWithHeader(string fileName, string fileHeader)
     {
-        Console.WriteLine($"Creating file: {fileName}");
+        Console.WriteLine($"\nCreating file: {fileName}");
         fileCreator.CreateFile(fileName);
 
-        Console.WriteLine($"\nWriting header to file: {fileName}");
+        Console.WriteLine($"Writing header to file: {fileName}");
         fileCreator.WriteToFile(fileName, fileHeader);
     }
 
@@ -32,6 +32,6 @@ class Server
 
     public void Shutdown()
     {
-        Console.WriteLine($"Sutting down server.\n");
+        Console.WriteLine($"\nSutting down server.\n");
     }
 }
