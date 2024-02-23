@@ -2,6 +2,9 @@ namespace DependencyInversionPrinciple;
 
 class FileCreatedSubscriber : ISubscriber
 {
+    public delegate void FileCreatedCallback(string fileName); 
+    private FileCreatedCallback callback;
+
     public FileCreatedSubscriber(string fileName)
     {
         subscribedFile = fileName;
@@ -12,5 +15,12 @@ class FileCreatedSubscriber : ISubscriber
     public void Update(string fileName)
     {
         Console.WriteLine($"File created: {fileName}");
+
+        callback(fileName);
+    }
+
+    public void SetCallback(FileCreatedCallback callback)
+    {
+        this.callback = callback;
     }
 }
