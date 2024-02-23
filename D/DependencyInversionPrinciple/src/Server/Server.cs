@@ -11,7 +11,7 @@ class Server
         string fileCreatorPath = System.IO.Directory.GetCurrentDirectory() + FILE_PATH;
         
         fileCreator = new FileCreator(fileCreatorPath);
-        notifier = new FileCreatedNotifier();
+        notifier = FileCreatedNotifier.GetFileCreatedNotifier();
     }
 
     public void CreateFileWithHeader(string fileName, string fileHeader)
