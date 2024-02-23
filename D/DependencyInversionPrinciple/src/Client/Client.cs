@@ -2,8 +2,8 @@ namespace DependencyInversionPrinciple;
 
 class Client
 {
-    private const string FILE_DESTINATION_PATH = "/src/Client/ReadFiles";
-    private const string FILE_SOURCE_PATH = "/src/Server/CreatedFiles";
+    private const string FILE_DESTINATION_PATH = "/src/Client/ReadFiles/";
+    private const string FILE_SOURCE_PATH = "/src/Server/CreatedFiles/";
     private string clientIdentifier;
     private FileReader fileReader;
     private FileCreatedSubscriber subscriber;
