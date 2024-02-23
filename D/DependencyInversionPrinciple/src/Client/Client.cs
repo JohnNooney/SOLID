@@ -35,7 +35,7 @@ class Client
 
     public void Shutdown()
     {
-        Console.WriteLine($"Client shutting down");
+        Console.WriteLine($"{clientIdentifier} shutting down");
 
         notifier.Unsubscribe(subscriber);
     }
