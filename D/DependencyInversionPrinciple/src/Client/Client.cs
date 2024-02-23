@@ -2,8 +2,6 @@ namespace DependencyInversionPrinciple;
 
 class Client
 {
-    // Client will create a subscriber and Read files
-    // files will be deleted after read
     private const string FILE_DESTINATION_PATH = "/src/Client/ReadFiles";
     private const string FILE_SOURCE_PATH = "/src/Server/CreatedFiles";
     private string clientIdentifier;
