@@ -42,6 +42,6 @@ class Client
     {
         Console.WriteLine($"{clientIdentifier} callback");
 
-        // Read file
+        fileReader.ReadFile(fileName);
     }
 }
