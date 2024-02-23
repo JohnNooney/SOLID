@@ -18,7 +18,7 @@ class Program
        
     }
 
-    public static void publishFileToServerForSubscriber(Server server, string subscriber)
+    private static void publishFileToServerForSubscriber(Server server, string subscriber)
     {
         string subscriberFile = subscriber + ".txt";
         string subscriberFileHeader = "This file is for " + subscriber;
@@ -27,7 +27,7 @@ class Program
         server.NotifyFileCreated(subscriberFile);
     }
 
-    public static void clientSubscription(Client client, string subscriber)
+    private static void clientSubscription(Client client, string subscriber)
     {
         string subscriberFile = subscriber + ".txt";
         
